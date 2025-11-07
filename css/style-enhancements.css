@@ -1,0 +1,458 @@
+/* Additional Style Enhancements */
+
+/* Glass morphism effects */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Enhanced header with glass effect */
+#header {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Gradient overlays */
+.section-gap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(245, 63, 81, 0.05) 0%, rgba(88, 86, 214, 0.05) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-gap > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Enhanced banner area */
+.banner-area {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-area::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  animation: rotate 30s linear infinite;
+  pointer-events: none;
+}
+
+/* Enhanced buttons with modern gradients */
+.primary-btn {
+  background: linear-gradient(135deg, #f53f51 0%, #ff6b7a 100%) !important;
+  border: none !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 4px 15px rgba(245, 63, 81, 0.4);
+}
+
+.primary-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.primary-btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+.primary-btn:hover {
+  box-shadow: 0 8px 30px rgba(245, 63, 81, 0.6);
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Enhanced price cards */
+.single-price {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.single-price .price-top {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.single-price:hover .price-top {
+  background: linear-gradient(135deg, #f53f51 0%, #ff6b7a 100%);
+  transform: scale(1.05);
+}
+
+.single-price .price-bottom {
+  padding: 30px;
+}
+
+.single-price h1 {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f53f51 0%, #5856d6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Enhanced course cards */
+.single-course {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+}
+
+.single-course::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #f53f51, #5856d6, #667eea);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.single-course:hover::before {
+  transform: scaleX(1);
+}
+
+.single-course .sale-btn {
+  background: linear-gradient(135deg, #f53f51 0%, #ff6b7a 100%);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(245, 63, 81, 0.4);
+}
+
+/* Enhanced counter section */
+.counter-area {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 80px 0;
+}
+
+.single-counter {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.single-counter:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.single-counter h1 {
+  color: white !important;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.single-counter p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Enhanced testimonial section */
+.single-testimonial {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  overflow: hidden;
+}
+
+.single-testimonial::before {
+  content: '"';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 100px;
+  color: rgba(245, 63, 81, 0.1);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.single-testimonial img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  border: 4px solid white;
+  transition: all 0.3s ease;
+}
+
+.single-testimonial:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(245, 63, 81, 0.4);
+  border-color: #f53f51;
+}
+
+/* Enhanced call-to-action */
+.call-to-action-area {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.call-to-action-area::before {
+  content: '';
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: rotate 30s linear infinite;
+}
+
+.download-button .buttons {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.download-button .buttons:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.download-button .buttons i {
+  font-size: 36px;
+  color: white;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.download-button .buttons:hover i {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Enhanced info section */
+.info-area .info-thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.info-area .info-thumb::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(245, 63, 81, 0.3) 0%, rgba(88, 86, 214, 0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.info-area .info-thumb:hover::after {
+  opacity: 1;
+}
+
+.info-area .info-thumb img {
+  border-radius: 20px;
+}
+
+/* Enhanced section titles */
+.title {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.title h1 {
+  font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.title p {
+  font-size: 18px;
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Floating animation for decorative elements */
+@keyframes float-decoration {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+.scroll-indicator i {
+  font-size: 36px;
+  color: white;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.scroll-indicator:hover i {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Enhanced navigation */
+#nav-menu-container ul li a {
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 10px 15px;
+}
+
+#nav-menu-container ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f53f51, #5856d6);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+#nav-menu-container ul li a:hover::before,
+#nav-menu-container ul li.menu-active a::before {
+  width: 80%;
+}
+
+#nav-menu-container ul li a:hover {
+  color: #f53f51;
+}
+
+/* Responsive enhancements */
+@media (max-width: 991px) {
+  .title h1 {
+    font-size: 32px;
+  }
+
+  .banner-content h1 {
+    font-size: 42px;
+  }
+
+  .single-counter h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title h1 {
+    font-size: 28px;
+  }
+
+  .banner-content h1 {
+    font-size: 32px;
+  }
+
+  .single-counter {
+    margin-bottom: 20px;
+  }
+
+  .single-price,
+  .single-course,
+  .single-testimonial {
+    margin-bottom: 30px;
+  }
+}
+
+/* Accessibility improvements */
+:focus {
+  outline: 2px solid #f53f51;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Selection color */
+::selection {
+  background: #f53f51;
+  color: white;
+}
+
+::-moz-selection {
+  background: #f53f51;
+  color: white;
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, input, select, textarea {
+  transition: all 0.3s ease;
+}
+
+/* Print styles */
+@media print {
+  .loading-screen,
+  #header,
+  .modern-footer {
+    display: none;
+  }
+}

@@ -1,0 +1,339 @@
+/* Modern Footer Styling - Inspired by React Component */
+
+.modern-footer {
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  margin-top: auto;
+  animation: fadeIn 0.8s ease-out;
+  position: relative;
+  z-index: 10;
+}
+
+.modern-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #f53f51, #5856d6, transparent);
+  opacity: 0.5;
+}
+
+.modern-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.modern-footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .modern-footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Left Section - Made with love */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-left {
+    align-items: flex-start;
+  }
+}
+
+.footer-made-with {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.footer-heart {
+  width: 1rem;
+  height: 1rem;
+  color: #ef4444;
+  fill: currentColor;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.footer-author {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+  background: linear-gradient(45deg, #f53f51, #5856d6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Center Section - Social Links */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: #f1f5f9;
+  color: #64748b;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-social-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(245, 63, 81, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.footer-social-link:hover::before {
+  width: 100px;
+  height: 100px;
+}
+
+.footer-social-link:hover {
+  transform: scale(1.1) translateY(-2px);
+  background: #dbeafe;
+  color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.footer-social-link:active {
+  transform: scale(0.95) translateY(0);
+}
+
+.footer-social-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-social-link:hover .footer-social-icon {
+  color: #3b82f6;
+  animation: bounce 0.6s ease;
+}
+
+/* GitHub specific */
+.footer-social-link[data-social="github"]:hover {
+  background: #f1f5f9;
+  color: #24292e;
+}
+
+.footer-social-link[data-social="github"]:hover .footer-social-icon {
+  color: #24292e;
+}
+
+/* LinkedIn specific */
+.footer-social-link[data-social="linkedin"]:hover {
+  background: #dbeafe;
+  color: #0077b5;
+}
+
+.footer-social-link[data-social="linkedin"]:hover .footer-social-icon {
+  color: #0077b5;
+}
+
+/* LeetCode specific */
+.footer-social-link[data-social="leetcode"]:hover {
+  background: #fef3c7;
+  color: #f59e0b;
+}
+
+.footer-social-link[data-social="leetcode"]:hover .footer-social-icon {
+  color: #f59e0b;
+}
+
+/* Email specific */
+.footer-social-link[data-social="email"]:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.footer-social-link[data-social="email"]:hover .footer-social-icon {
+  color: #ef4444;
+}
+
+/* Right Section - Copyright */
+.footer-copyright {
+  font-size: 0.875rem;
+  color: #64748b;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-copyright {
+    text-align: right;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .modern-footer {
+    background: #0f172a;
+    border-top-color: #334155;
+  }
+
+  .footer-made-with {
+    color: #94a3b8;
+  }
+
+  .footer-author {
+    color: #cbd5e1;
+  }
+
+  .footer-social-link {
+    background: #1e293b;
+    color: #94a3b8;
+  }
+
+  .footer-social-link:hover {
+    background: #1e3a8a;
+  }
+
+  .footer-copyright {
+    color: #94a3b8;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Icon SVG styles */
+.icon-github,
+.icon-linkedin,
+.icon-code,
+.icon-mail {
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .modern-footer-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-made-with {
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-author {
+    font-size: 0.8rem;
+  }
+
+  .footer-social {
+    gap: 0.5rem;
+  }
+
+  .footer-social-link {
+    padding: 0.4rem;
+  }
+
+  .footer-social-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.75rem;
+  }
+}
+
+/* Hover effects for the entire footer */
+.modern-footer-content > div {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.modern-footer-content > div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.modern-footer-content > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.modern-footer-content > div:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Tooltip styles */
+.footer-social-link::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px);
+  background: #1e293b;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social-link:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+/* Loading animation for icons */
+@keyframes iconPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Accessibility improvements */
+.footer-social-link:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.footer-social-link:focus:not(:focus-visible) {
+  outline: none;
+}
