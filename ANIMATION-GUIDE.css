@@ -1,0 +1,203 @@
+/* Quick Animation Reference Guide */
+
+/* 
+ * To apply animations to any element, add these classes:
+ */
+
+/* FADE ANIMATIONS */
+.animate-fade-in-left      /* Fades in from left */
+.animate-fade-in-right     /* Fades in from right */
+.animate-scale-in          /* Scales up while fading in */
+
+/* SCROLL ANIMATIONS */
+.scroll-animate            /* Auto-animates on scroll into view */
+.animate-on-scroll         /* Fades up on scroll */
+
+/* TEXT EFFECTS */
+.gradient-text             /* Gradient colored text */
+
+/* CARD EFFECTS */
+/* Cards (.single-price, .single-course, .single-testimonial) automatically have:
+ * - Hover lift effect
+ * - Shadow enhancement
+ * - Scale transformation
+ * - Shimmer effects
+ */
+
+/* BUTTON EFFECTS */
+/* All .primary-btn and .header-btn automatically have:
+ * - Ripple effect on click
+ * - Lift on hover
+ * - Glow shadow
+ * - Scale transformation
+ */
+
+/* ANIMATION KEYFRAMES AVAILABLE */
+@keyframes fadeInUp        /* Fade in from bottom */
+@keyframes fadeInDown      /* Fade in from top */
+@keyframes fadeInLeft      /* Fade in from left */
+@keyframes fadeInRight     /* Fade in from right */
+@keyframes scaleIn         /* Scale from small to normal */
+@keyframes slideInUp       /* Slide up from bottom */
+@keyframes pulse           /* Pulse effect */
+@keyframes bounce          /* Bounce effect */
+@keyframes float           /* Floating up and down */
+@keyframes glow            /* Glowing effect */
+@keyframes shimmer         /* Shimmer across element */
+@keyframes heartbeat       /* Heart beating effect */
+@keyframes rotate          /* 360° rotation */
+
+/* CUSTOM ANIMATIONS USAGE EXAMPLE */
+/*
+.my-element {
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+*/
+
+/* HOVER EFFECTS */
+/*
+All cards and interactive elements have built-in hover effects:
+- Transform: translateY() for lift
+- Box-shadow: enhanced shadows
+- Scale: slight scale increase
+- Border: gradient borders reveal
+*/
+
+/* PARALLAX EFFECTS */
+/*
+Banner and image sections have parallax scrolling:
+- Automatically applied to .banner-area
+- Images move slower than scroll
+*/
+
+/* COUNTER ANIMATIONS */
+/*
+Numbers with .counter class automatically count up when visible:
+- Uses Intersection Observer
+- Smooth counting animation
+- Triggers once per page load
+*/
+
+/* LOADING SCREEN */
+/*
+.loading-screen automatically fades out on page load
+- Circular animated loader
+- Gradient background
+- 500ms fade-out transition
+*/
+
+/* SOCIAL LINKS */
+/*
+.footer-social-link automatically has:
+- Scale on hover
+- Color change based on platform
+- Lift animation
+- Tooltip on hover
+*/
+
+/* RESPONSIVE ANIMATIONS */
+/*
+@media (max-width: 991px) - Tablet
+@media (max-width: 767px) - Mobile
+- Animations adapt to screen size
+- Touch-optimized interactions
+*/
+
+/* ACCESSIBILITY */
+/*
+@media (prefers-reduced-motion: reduce)
+- Automatically reduces all animations
+- Respects user preferences
+- Maintains functionality
+*/
+
+/* PERFORMANCE TIPS */
+/*
+1. Use transform and opacity for animations (GPU accelerated)
+2. Avoid animating width, height, top, left, etc.
+3. Use will-change sparingly
+4. Keep animation durations reasonable (300ms-800ms)
+5. Use ease-out for entrance animations
+6. Use ease-in-out for continuous animations
+*/
+
+/* GRADIENT COLORS */
+/*
+Primary: #f53f51 (Red)
+Secondary: #5856d6 (Purple)
+Accent 1: #667eea (Blue)
+Accent 2: #764ba2 (Pink)
+*/
+
+/* COMMON PATTERNS */
+
+/* Pattern 1: Fade in on scroll */
+/*
+<div class="scroll-animate">
+  Your content here
+</div>
+*/
+
+/* Pattern 2: Gradient text */
+/*
+<h1 class="gradient-text">
+  Your heading here
+</h1>
+*/
+
+/* Pattern 3: Animated button */
+/*
+<a href="#" class="primary-btn">
+  Click Me
+</a>
+*/
+
+/* Pattern 4: Card with hover effect */
+/*
+<div class="single-price">
+  <div class="price-top">
+    <h4>Title</h4>
+  </div>
+  <p>Description</p>
+  <div class="price-bottom">
+    <h1><span>$</span>99.99</h1>
+    <a href="#" class="primary-btn">Buy Now</a>
+  </div>
+</div>
+*/
+
+/* JAVASCRIPT FEATURES */
+/*
+- Automatic scroll animations (Intersection Observer)
+- Counter animations when in view
+- Smooth scroll for anchor links
+- Ripple effect on button clicks
+- Card tilt on mouse move
+- Parallax scrolling
+- Image lazy loading
+- Typing effect for text
+- Particle system
+- Cursor glow effect
+*/
+
+/* CUSTOMIZATION */
+/*
+To customize animations:
+1. Edit duration in CSS (e.g., animation: fadeInUp 1s → 2s)
+2. Change delay (e.g., animation-delay: 0.5s)
+3. Modify timing function (ease-out, ease-in, cubic-bezier)
+4. Adjust transform values in keyframes
+*/
+
+/* DEBUGGING */
+/*
+To debug animations:
+1. Check browser console for errors
+2. Verify CSS file is loaded
+3. Verify JS file is loaded after jQuery
+4. Check element has correct class
+5. Use browser DevTools Animation panel
+6. Reduce animation speed for testing
+*/
