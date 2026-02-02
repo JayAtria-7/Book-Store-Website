@@ -201,17 +201,6 @@
       });
     });
 
-    // Smooth scroll for anchor links
-    $('a[href^="#"]').on('click', function(e) {
-      const target = $(this.getAttribute('href'));
-      if (target.length) {
-        e.preventDefault();
-        $('html, body').stop().animate({
-          scrollTop: target.offset().top - 80
-        }, 1000, 'easeInOutExpo');
-      }
-    });
-
     // Page load animation
     $('body').addClass('page-loaded');
     
